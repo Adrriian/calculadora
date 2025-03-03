@@ -1,0 +1,94 @@
+codigo js do modelo antigo
+
+let result = document.querySelector(".result")
+let number = ""
+let number2 = ""
+let sinal = ""
+let valoragora = 1
+
+function resett() {
+    number = ""
+    number2 = ""
+    sinal = ""
+    valoragora = 1
+}
+function clicou(button) {
+    switch (button) {
+        case ".":
+
+            break;
+
+        case "0":
+            result.innerHTML = 0
+            break;
+        case "1":
+            number = 1
+            result.innerHTML
+
+            break;
+
+            break;
+        case "2":
+
+            break;
+        case "3":
+
+            break;
+        case "4":
+
+            break;
+        case "5":
+
+            break;
+        case "6":
+
+            break;
+        case "7":
+
+            break;
+        case "8":
+
+            break;
+        case "9":
+
+            break;
+
+        case "c":
+            resett()
+            break;
+
+        case "/":
+
+            break;
+        case "x":
+
+            break;
+        case "-":
+            sinal = "-";
+            result.innerHTML = sinal;
+            break;
+
+        case "+":
+            sinal = "+";
+            result.innerHTML = sinal;
+            break;
+
+        case "=":
+
+            break;
+    }
+
+    updateresult();
+}
+
+function updateresult() {
+
+    if (number === "") {
+        result.innerHTML = "0"
+    } else {
+        result.innerHTML = number + sinal + number2
+    }
+}
+
+
+
