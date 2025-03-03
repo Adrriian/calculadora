@@ -84,9 +84,6 @@ body {
 
 .igual {
     grid-column: 3/5;
-}
-
-.igual {
     background-color: rgb(7, 214, 7);
 }
 
