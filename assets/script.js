@@ -9,7 +9,7 @@ let result = document.querySelector(".result")
 btn.forEach(function(btns){
     btns.addEventListener("click", function(){
         
-        switch(btns){
+        switch(btns.innerText){
             case "1":
                   number = 1
             break;
@@ -21,7 +21,7 @@ btn.forEach(function(btns){
 
 function update(){
     if(number === ""){
-        result.innerText = "0"
+        result.innerText = "2"
     }else{
         result.innerText = number + operador + number2
     }
