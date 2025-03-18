@@ -11,7 +11,7 @@ btn.forEach(function(btns){
         switch(btns.innerText){
             case "1":
                 if(marcador === 1){
-                    number = result.innerText
+                    number = case.
                     marcador++
                 }else{
                     number2 = result.innerText
