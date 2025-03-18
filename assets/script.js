@@ -13,5 +13,15 @@ btn.forEach(function(btns){
             result.innerText = 1;
             break;
         }
+        
+        update()
     })
 })
+
+function update(){
+    if(number === ""){
+        result.innerText = "=="
+    }else{
+        result.innerText = number + operador + number2
+    }
+}
