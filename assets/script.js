@@ -12,7 +12,7 @@ btn.forEach(function(btns){
         switch(btns){
             case "1":
                 if(marcador === 1){
-                    number = result.innerText
+                    number = 1
                     marcador++
                  }
             break;
