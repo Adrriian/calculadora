@@ -7,11 +7,11 @@ let btn = document.querySelector(".key");
 let result = document.querySelector(".result")
 
 btn.forEach(function(btns){
-    btns.addEventListener("click")
-        switch(btns.innerText){
+    btns.addEventListener("click", function(){
+        switch(btns){
             case "1":
             result.innerText = 1;
             break;
-        
-    }
+        }
+    })
 })
