@@ -11,7 +11,7 @@ btn.forEach(function(btns){
         
         switch(btns.innerText){
             case "1":
-                  number = 1
+                  number = result.innerText
             break;
         }
 
