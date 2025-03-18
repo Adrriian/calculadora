@@ -10,7 +10,7 @@ btn.forEach(function(btns){
     btns.addEventListener("click", function(){
         switch(btns.innerText){
             case "1":
-            
+            escolhanumber()
             break;
         }
 
