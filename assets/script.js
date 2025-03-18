@@ -10,12 +10,12 @@ btn.forEach(function(btns){
     btns.addEventListener("click", function(){
         switch(btns.innerText){
             case "1":
-                    if(marcador === 1){
-                       number = result.innerText
-                       marcador++
-                    }else{
-                       number2 = result.innerText
-                    }
+                if(marcador === 1){
+                    number = result.innerText
+                    marcador++
+                }else{
+                    number2 = result.innerText
+                }
             break;
         }
 
@@ -25,7 +25,7 @@ btn.forEach(function(btns){
 
 function update(){
     if(number === ""){
-        result.innerText = "=="
+        result.innerText = "0"
     }else{
         result.innerText = number + operador + number2
     }
