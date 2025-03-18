@@ -5,8 +5,9 @@ let marcador = "";
 
 let btn = documentQuerySelector(".key");
 let result = document.querySelector(".result")
+
 btn.forEach(function(btns){
-    btns.addEventListner("click")
+    btns.addEventListener("click")
 
     switch(btns){
         case "1":
