@@ -8,15 +8,17 @@ let result = document.querySelector(".result")
 
 btn.forEach(function(btns){
     btns.addEventListener("click", function(){
-       
-        switch(btns.innerText){
+        function escolhanumber(){
+            if(marcador === 1){
+               number = result.innerText
+               marcador++
+            }else{
+               number2 = result.innerText
+            }
+       }
+        switch(btns){
             case "1":
-                if(marcador === 1){
-                    number = result.innerText
-                    marcador++
-                 }else{
-                    number2 = result.innerText
-                 }
+            escolhanumber()
             break;
         }
 
