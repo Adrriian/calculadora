@@ -28,6 +28,10 @@ btn.forEach(function (btns) {
             operador = "+"
             console.log(`sinal é: ` + operador)
             break;
+            case "-": 
+            operador = "-"
+            console.log(`sinal é: ` + operador)
+            break;
         }
 
         
