@@ -51,7 +51,6 @@ btn.forEach(function (btns) {
                 number2 = "";
                 operador = "";
                 marcador = 1;
-                result.innerText = 0;
             break;
 
             case "=":
