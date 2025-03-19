@@ -2,52 +2,61 @@ let number = "";
 let number2 = "";
 let operador = "";
 let marcador = 1;
+let calculoResult = "";
 
 let btn = document.querySelectorAll(".key");
-let result = document.querySelector(".result")
-let calculoresult = "";
+let result = document.querySelector(".result");
+
+
+function update() {
+    result.innerText = number + operador + number2
+}
+
+function exibirresult() {
+    switch (operador) {
+        case "+":
+            calculoResult = Number(number) + Number(number2);
+            break;
+
+        case "-":
+            calculoResult = Number(number) - Number(number2);
+            break;
+
+        case "x":
+            calculoResult = Number(number) * Number(number2);
+            break;
+
+        case "/":
+            calculoResult = Number(number) / Number(number2);
+            break;
+
+    }
+    result.innerText = calculoResult
+
+}
+function sinal() {
+    if (number === "") {
+        operador = "";
+        alert("digite um número")
+    }
+}
 
 btn.forEach(function (btns) {
     btns.addEventListener("click", function () {
-
-        function colocandonumero(){
-            if(operador === ""){
+        function colocandonumero() {
+            if (operador === "") {
                 number += btns.innerText
                 console.log(`numero 1 é: ` + number)
-            }else{
+            } else {
                 number2 += btns.innerText
                 console.log(`numero 2 é: ` + number2)
             }
         }
-       /* function sinal(){
-            if (number === ""){
-                return alert("Digite um numero")
-            }
-        }*/
-       /* function exibirresult(){
-            switch (operador) {
-                case "+":   
-                calculoresult = Number(number) + Number(number2)
-                break;
-
-                case "-":
-                calculoresult = Number(number) - Number(number2)
-                break;
-
-                case "x": 
-                calculoresult = Number(number) * Number(number2)
-                break;
-
-                case "/": 
-                calculoresult = Number(number) / Number(number2)
-                break;
-        }
-        }*/
-
         switch (btns.innerText) {
-            case "1":; case "2":; case "3":; case "4":; case "5":; case "6":; case"7":; case"8":; case "9":;
+            case "1": ; case "2": ; case "3": ; case "4": ; case "5": ; case "6": ; case "7": ; case "8": ; case "9": ;
             case "0":
-            colocandonumero()
+                colocandonumero()
+                update();
                 break;
 
             case "C":
@@ -55,45 +64,39 @@ btn.forEach(function (btns) {
                 number2 = "";
                 operador = "";
                 marcador = 1;
-            break;
-            case "+":   
-                calculoresult = Number(number) + Number(number2)
-                sinal()
+                result.innerText = "0";
+                break;
+            case "+":
                 operador = "+"
+                console.log(operador)
+                sinal()
+                update();
                 break;
 
-                case "-":
-                sinal()
+            case "-":
                 operador = "-"
-                calculoresult = Number(number) - Number(number2)
+                console.log(operador)
+                sinal()
+                update();
                 break;
 
-                case "x": 
+            case "x":
                 operador = "x"
-                calculoresult = Number(number) * Number(number2)
+                console.log(operador)
                 sinal()
+                update();
                 break;
 
-                case "/": 
+            case "/":
                 operador = "/"
-                calculoresult = Number(number) / Number(number2)
+                console.log(operador)
                 sinal()
+                update();
                 break;
-                case "=":
-                    exibirresult()
+            case "=":
+                exibirresult()
+                console.log(calculoResult)
                 break;
         }
-
-        
-
-        update()
+    })
 })
-})
-
-function update() {
-    if (number === "") {
-        result.innerText = "0"
-    } else {
-        result.innerText = number + operador + number2
-    }
-}
