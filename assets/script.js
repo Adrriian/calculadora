@@ -87,8 +87,8 @@ btn.forEach(function (btns) {
         
 
         update()
-    )
-)
+})
+})
 
 function update() {
     if (number === "") {
