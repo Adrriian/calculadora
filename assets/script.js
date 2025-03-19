@@ -9,16 +9,8 @@ let result = document.querySelector(".result")
 btn.forEach(function (btns) {
     btns.addEventListener("click", function () {
 
-        
-        switch (btns.innerText) {
-            case "1":;
-            case "2":
-            colocandonumero()
-                break; 
-        }
-        
         function colocandonumero(){
-            if(sinal === ""){
+            if(operador === ""){
                 number += btns.innerText
                 console.log(`numero 1 é: ` + number)
             }else{
@@ -26,6 +18,15 @@ btn.forEach(function (btns) {
                 console.log(`numero 2 é: ` + number2)
             }
         }
+        
+        switch (btns.innerText) {
+            case "1":;
+            case "2":
+            colocandonumero()
+                break; 
+        }
+
+        
 
         update()
     })
