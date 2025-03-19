@@ -13,7 +13,7 @@ btn.forEach(function (btns) {
             case "1":
                 number = btns.innerText
                 console.log(`numero 1 é: ` + number)
-                break; s
+                break; ss
         }
 
         update()
