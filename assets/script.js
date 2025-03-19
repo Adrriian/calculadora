@@ -12,7 +12,7 @@ btn.forEach(function (btns) {
         switch (btns.innerText) {
             case "1":
                 if(number === ""){
-                    number += btns.innerText
+                    number = btns.innerText
                     console.log(`numero 1 é: ` + number)
                 }else{
                     number += btns.innerText
