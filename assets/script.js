@@ -37,10 +37,10 @@ btn.forEach(function (btns) {
             sinal()
             break;
 
-            case "-": 
+            case "-":
+            sinal()
             operador = "-"
             calculoresult = Number(number) - Number(number2)
-            sinal()
             break;
 
             case "x": 
