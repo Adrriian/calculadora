@@ -24,6 +24,9 @@ btn.forEach(function (btns) {
                 return alert("Digite um numero")
             }
         }
+        function exibirresult(){
+            result.innerText = calculoresult
+        }
 
 
         switch (btns.innerText) {
@@ -31,10 +34,10 @@ btn.forEach(function (btns) {
             case "0":
             colocandonumero()
                 break;
-            case "+": 
-           
+            case "+":   
             calculoresult = Number(number) + Number(number2)
             sinal()
+            operador = "+"
             break;
 
             case "-":
@@ -63,7 +66,7 @@ btn.forEach(function (btns) {
             break;
 
             case "=":
-                result.innerText = calculoresult
+                exibirresult()
             break;
         }
 
