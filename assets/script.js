@@ -18,12 +18,15 @@ btn.forEach(function (btns) {
                 console.log(`numero 2 é: ` + number2)
             }
         }
-        
+
         switch (btns.innerText) {
             case "1":;
             case "2":
             colocandonumero()
                 break; 
+            case "+": 
+            operador = "+"
+            break;
         }
 
         
