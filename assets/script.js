@@ -32,7 +32,7 @@ btn.forEach(function (btns) {
             colocandonumero()
                 break;
             case "+": 
-            operador = "+"
+           
             calculoresult = Number(number) + Number(number2)
             sinal()
             break;
