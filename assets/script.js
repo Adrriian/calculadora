@@ -19,6 +19,11 @@ btn.forEach(function (btns) {
                 console.log(`numero 2 é: ` + number2)
             }
         }
+        function sinal(){
+            if (number === ""){
+                return alert("Digite um numero")
+            }
+        }
 
 
         switch (btns.innerText) {
@@ -29,21 +34,25 @@ btn.forEach(function (btns) {
             case "+": 
             operador = "+"
             calculoresult = Number(number) + Number(number2)
+            sinal()
             break;
 
             case "-": 
             operador = "-"
             calculoresult = Number(number) - Number(number2)
+            sinal()
             break;
 
             case "x": 
             operador = "x"
             calculoresult = Number(number) * Number(number2)
+            sinal()
             break;
 
             case "/": 
             operador = "/"
             calculoresult = Number(number) / Number(number2)
+            sinal()
             break;
 
             case "C":
