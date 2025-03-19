@@ -19,11 +19,11 @@ btn.forEach(function (btns) {
                 console.log(`numero 2 é: ` + number2)
             }
         }
-        function sinal(){
+       /* function sinal(){
             if (number === ""){
                 return alert("Digite um numero")
             }
-        }
+        }*/
         function exibirresult(){
             switch (btns.innerText) {
                 case "+":   
