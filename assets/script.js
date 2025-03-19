@@ -75,7 +75,7 @@ btn.forEach(function (btns) {
 
 function update() {
     if (number === "") {
-        result.innerText = "0"
+        result.innerText = ""
     } else {
         result.innerText = number + operador + number2
     }
