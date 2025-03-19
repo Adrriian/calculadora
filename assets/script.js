@@ -24,9 +24,39 @@ btn.forEach(function (btns) {
                 return alert("Digite um numero")
             }
         }*/
-        function exibirresult(){
-            switch (btns.innerText) {
+       /* function exibirresult(){
+            switch (operador) {
                 case "+":   
+                calculoresult = Number(number) + Number(number2)
+                break;
+
+                case "-":
+                calculoresult = Number(number) - Number(number2)
+                break;
+
+                case "x": 
+                calculoresult = Number(number) * Number(number2)
+                break;
+
+                case "/": 
+                calculoresult = Number(number) / Number(number2)
+                break;
+        }
+        }*/
+
+        switch (btns.innerText) {
+            case "1":; case "2":; case "3":; case "4":; case "5":; case "6":; case"7":; case"8":; case "9":;
+            case "0":
+            colocandonumero()
+                break;
+
+            case "C":
+                number = "";
+                number2 = "";
+                operador = "";
+                marcador = 1;
+            break;
+            case "+":   
                 calculoresult = Number(number) + Number(number2)
                 sinal()
                 operador = "+"
@@ -49,32 +79,16 @@ btn.forEach(function (btns) {
                 calculoresult = Number(number) / Number(number2)
                 sinal()
                 break;
-        }
-        }
-
-        switch (btns.innerText) {
-            case "1":; case "2":; case "3":; case "4":; case "5":; case "6":; case"7":; case"8":; case "9":;
-            case "0":
-            colocandonumero()
+                case "=":
+                    exibirresult()
                 break;
-
-            case "C":
-                number = "";
-                number2 = "";
-                operador = "";
-                marcador = 1;
-            break;
-
-            case "=":
-                exibirresult()
-            break;
         }
 
         
 
         update()
-    })
-})
+    )
+)
 
 function update() {
     if (number === "") {
