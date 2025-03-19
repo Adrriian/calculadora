@@ -47,11 +47,11 @@ btn.forEach(function (btns) {
             break;
 
             case "C":
-                let number = "";
-                let number2 = "";
-                let operador = "";
-                let marcador = 1;
-                result.innerText = 0
+                number = "";
+                number2 = "";
+                operador = "";
+                marcador = 1;
+                result.innerText = 0;
             break;
 
             case "=":
