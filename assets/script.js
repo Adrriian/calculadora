@@ -20,7 +20,8 @@ btn.forEach(function (btns) {
         }
 
         switch (btns.innerText) {
-            case "1":
+            case "1":;
+            case "2":
             colocandonumero()
                 break; 
         }
