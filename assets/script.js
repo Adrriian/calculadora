@@ -33,18 +33,27 @@ function exibirresult() {
     }
     result.innerText = calculoResult
 
+
 }
 function sinal() {
     if (number === "") {
+        number = "";
+        number2 = "";
         operador = "";
-        alert("digite um número")
+        alert("digite o primeiro número")
+    } else if (result.innerText == calculoResult) {
+        number = calculoResult
+        number2 = "";
+        marcador = 1
+        operador = ""
     }
 }
 
-btn.forEach(function (btns) {
-    btns.addEventListener("click", function () {
+btn.forEach(function(btns) {
+    btns.addEventListener("click", function() {
         function colocandonumero() {
             if (operador === "") {
+
                 number += btns.innerText
                 console.log(`numero 1 é: ` + number)
             } else {
@@ -67,34 +76,72 @@ btn.forEach(function (btns) {
                 result.innerText = "0";
                 break;
             case "+":
-                operador = "+"
-                console.log(operador)
                 sinal()
+                if (number === "") {
+                    operador = ""
+                }else{
+                    operador= "+"
+                    marcador = 2
+                }
+                console.log(operador)
                 update();
                 break;
 
             case "-":
-                operador = "-"
-                console.log(operador)
                 sinal()
+                if (number === "") {
+                    operador = ""
+                }else{
+                    operador= "-"
+                    marcador = 2
+                }
+                console.log(operador)
                 update();
                 break;
 
             case "x":
-                operador = "x"
-                console.log(operador)
                 sinal()
+                if (number === "") {
+                    operador = ""
+                }else{
+                    operador= "x"
+                    marcador = 2
+                }
+                console.log(operador)
                 update();
                 break;
 
             case "/":
-                operador = "/"
-                console.log(operador)
                 sinal()
+                if (number === "") {
+                    operador = ""
+                }else{
+                    operador= "/"
+                    marcador = 2
+                }
+                console.log(operador)
                 update();
                 break;
+
+            case ".":
+                sinal()
+                if (number !== "" && marcador === 1 && number2 === "") {
+                    number += '.';
+                    marcador = 2
+                }else if (number !== "" && marcador === 2 && number2 === ""){                    alert("digite o segundo números")
+                }else if(number !== "" && marcador === 2 && number2 !== ""){
+                    number2 += '.';
+                    marcador = 2
+                }
+                update();
+                break;
+
             case "=":
-                exibirresult()
+                if (number === "" || operador === "" || number2 === "") {
+                    alert("Faça a equação")
+                }else{
+                     exibirresult()
+                }
                 console.log(calculoResult)
                 break;
         }
