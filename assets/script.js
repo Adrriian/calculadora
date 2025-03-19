@@ -9,16 +9,20 @@ let result = document.querySelector(".result")
 btn.forEach(function (btns) {
     btns.addEventListener("click", function () {
 
+        function colocandonumero(){
+            if(sinal === ""){
+                number += btns.innerText
+                console.log(`numero 1 é: ` + number)
+            }else{
+                number2 += btns.innerText
+                console.log(`numero 2 é: ` + number2)
+            }
+        }
+
         switch (btns.innerText) {
             case "1":
-                if(number === ""){
-                    number += btns.innerText
-                    console.log(`numero 1 é: ` + number)
-                }else{
-                    number2 += btns.innerText
-                    console.log(`numero 2 é: ` + number2)
-                }
-                break; ss
+            colocandonumero()
+                break; 
         }
 
         update()
