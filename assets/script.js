@@ -25,7 +25,30 @@ btn.forEach(function (btns) {
             }
         }
         function exibirresult(){
-            result.innerText = calculoresult
+            switch (btns.innerText) {
+                case "+":   
+                calculoresult = Number(number) + Number(number2)
+                sinal()
+                operador = "+"
+                break;
+
+                case "-":
+                sinal()
+                operador = "-"
+                calculoresult = Number(number) - Number(number2)
+                break;
+
+                case "x": 
+                operador = "x"
+                calculoresult = Number(number) * Number(number2)
+                sinal()
+                break;
+
+                case "/": 
+                operador = "/"
+                calculoresult = Number(number) / Number(number2)
+                sinal()
+                break;
         }
 
 
@@ -34,29 +57,6 @@ btn.forEach(function (btns) {
             case "0":
             colocandonumero()
                 break;
-            case "+":   
-            calculoresult = Number(number) + Number(number2)
-            sinal()
-            operador = "+"
-            break;
-
-            case "-":
-            sinal()
-            operador = "-"
-            calculoresult = Number(number) - Number(number2)
-            break;
-
-            case "x": 
-            operador = "x"
-            calculoresult = Number(number) * Number(number2)
-            sinal()
-            break;
-
-            case "/": 
-            operador = "/"
-            calculoresult = Number(number) / Number(number2)
-            sinal()
-            break;
 
             case "C":
                 number = "";
