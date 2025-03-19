@@ -37,7 +37,7 @@ btn.forEach(function (btns) {
             break;
 
             case "*": 
-            operador = "*"
+            operador = "x"
             calculoresult = Number(number) * Number(number2)
             break;
 
