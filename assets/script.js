@@ -27,22 +27,22 @@ btn.forEach(function (btns) {
             colocandonumero()
                 break;
             case "+": 
-            operador = btns.innerText
+            operador = "+"
             calculoresult = Number(number) + Number(number2)
             break;
 
             case "-": 
-            operador = btns.innerText
+            operador = "-"
             calculoresult = Number(number) - Number(number2)
             break;
 
             case "*": 
-            operador = btns.innerText
+            operador = "*"
             calculoresult = Number(number) * Number(number2)
             break;
 
             case "/": 
-            operador = btns.innerText
+            operador = "/"
             calculoresult = Number(number) / Number(number2)
             break;
 
