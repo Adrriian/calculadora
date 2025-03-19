@@ -15,8 +15,8 @@ btn.forEach(function (btns) {
                     number = btns.innerText
                     console.log(`numero 1 é: ` + number)
                 }else{
-                    number = btns.innerText
-                    console.log(`numero 2 é: ` + number)
+                    number2 += btns.innerText
+                    console.log(`numero 2 é: ` + number2)
                 }
                 break; ss
         }
